@@ -1,6 +1,8 @@
  [build]
   command = "npm run build"
  [functions]
-    name = "hello worls"
-    [functions.build]
-    command = "npm start"
+
+    [functions.name]
+    external_node_modules = [
+      "functions/src/api.js"
+    ]
