@@ -1,24 +1,18 @@
 {
-    "name": "integration-example-netlify-nodejs",
-    "version": "0.1.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "build": "node index.js"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/petarsrepo/integration-example-netlify-nodejs.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/petarsrepo/integration-example-netlify-nodejs/issues"
-    },
-    "homepage": "https://github.com/petarsrepo/integration-example-netlify-nodejs#readme",
-    "dependencies": {
-      "dotenv-vault-core": "^0.5.0",
-      "node-fetch": "^3.2.10"
-    }
+  "name": "back_end_netly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "netlify deploy --prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "netlify-cli": "^12.7.2",
+    "netlify-lambda": "^2.0.15",
+    "serverless-http": "^2.7.0"
   }
-  
+}
