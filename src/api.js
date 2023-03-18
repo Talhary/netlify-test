@@ -2,9 +2,8 @@
 const express = require('express')
 const router = require('./route.js')
 const app = express();
-app.use('/login',router )
+const serverless = require('serverless-http')
+app.use('/.netlify/functions/api',router )
 
 
-app.listen(5000, ()=>{
-    console.log('server is listening 5000')
-})
+module.exports.handler = serverless(app)
