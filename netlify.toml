@@ -1,8 +1,2 @@
- [build]
+[build]
   command = "npm run build"
- [functions]
-
-    [functions.name]
-    external_node_modules = [
-      "functions/src/api.js"
-    ]

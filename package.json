@@ -1,20 +1,24 @@
 {
-  "name": "codespaces-blank",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build":" npm install ",
-    "start": "node ./src/api.js"
-    
-    
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2",
-    "netlify-lambda": "^2.0.16",
-    "serverless-http": "^3.2.0"
+    "name": "integration-example-netlify-nodejs",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "build": "node index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/petarsrepo/integration-example-netlify-nodejs.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/petarsrepo/integration-example-netlify-nodejs/issues"
+    },
+    "homepage": "https://github.com/petarsrepo/integration-example-netlify-nodejs#readme",
+    "dependencies": {
+      "dotenv-vault-core": "^0.5.0",
+      "node-fetch": "^3.2.10"
+    }
   }
-}
+  
