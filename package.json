@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":" node ./src/api.js"
+    "build":" npm install ",
+    "start": "node ./src/api.js"
     
     
   },
