@@ -3,10 +3,7 @@ const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
 const router = express.Router();
-
-
-router.get('/', (req, res) => {
-  res.json([
+const apid = [
     {
         "number": "03346645683",
         "apid": "46379603,46371872",
@@ -967,7 +964,28 @@ router.get('/', (req, res) => {
         "code": "000000471,000000469",
         "name": "Mini Super Card - Rs.349,Super Minutes"
     }
-]);
+]
+router.use(express.json())
+router.get('/', (req, res) => {
+    
+   res.json(apid).status(200)
+});
+router.get('/:text', (req, res) => {
+    let result = []
+    const text = req.params.text
+    apid.forEach((el)=>{
+      el.name.split(' ').forEach((e)=>{
+       if(text == e.toLowerCase())
+       result.push(el)
+      })
+    })
+    apid.forEach((el)=>{
+     el.apid.split(',').forEach((e)=>{
+      if(text == e.toLowerCase())
+      result.push(el)
+     })
+   })
+  return res.json(result).status(200)
 });
 
 app.use('/.netlify/functions/api', router);
